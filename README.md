@@ -1,7 +1,5 @@
 ### scn royal
 
-npm run build
-git commit -m "setting up gh-pages and CI/CD with secrets"
 git commit -m "added more route paths"
 git commit -m "added base URL"
 git commit -m "switched to hash-based routing"
