@@ -1,5 +1,6 @@
 ### scn royal
 
+npm run build
 git commit -m "added more route paths"
 git commit -m "added base URL"
 git commit -m "switched to hash-based routing"
