@@ -2,8 +2,6 @@
 
 npm run build
 git commit -m "added more route paths"
-git commit -m "added . to directory path in index.html for github rendering"
-git commit -m "updated index.html"
 git commit -m "gh-page routing path"
 npm install react-icons --save
 git commit -m "user profile + cart + favorites + searchbar + navbar"
