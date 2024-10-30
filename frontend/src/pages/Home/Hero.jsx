@@ -1,11 +1,12 @@
 import React from "react";
 import { FiShoppingCart } from "react-icons/fi";
+import heroImg from "../../assets/heroImg.png"
 
 export const Hero = () => {
   return (
     <div className="flex flex-col md:flex-row-reverse py-16 justify-between items-center gap-12">
       <div className="md:w-1/2 w-full flex items-center md:justify-end">
-        <img src="" alt="hero image" />
+        <img src={heroImg} alt="hero image" className="w-96 md:w-full" />
       </div>
       <div className="md:w-1/2 w-full">
         <h1 className="md:text-5xl text-2xl font-medium mb-7">

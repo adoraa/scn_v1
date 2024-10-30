@@ -1,0 +1,91 @@
+[
+    {
+      "_id": 1,
+      "title": "Emper Luxe Rouge",
+      "description": "Emper Luxe Rouge is a warm and powerful fragrance crafted for a charismatic individual who is full of ambition.",
+      "category": "unisex",
+      "trending": true,
+      "image": "item-1.png",
+      "oldPrice": 29.99,
+      "newPrice": 19.99,
+      "size": "100ml"
+    },
+    {
+      "_id": 2,
+      "title": "Sauvage Elixir",
+      "description": "Sauvage Elixir is a highly concentrated fragrance, blending the iconic freshness of Sauvage with spicy notes, custom lavender essence, and rich woods for a powerful, captivating trail.",
+      "category": "masculine",
+      "trending": true,
+      "image": "item-2.png",
+     "oldPrice": 24.99,
+      "newPrice": 14.99,
+      "size": "100ml"
+    },
+    {
+      "_id": 3,
+      "title": "My Way",
+      "description": "Giorgio Armani My Way is a powerful and luminous floral bouquet with a woody and penetrating trail, embodying unique experiences and authentic encounters from around the world.",
+      "category": "feminine",
+      "trending": true,
+      "image": "item-3.png",
+      "oldPrice": 39.99,
+      "newPrice": 29.99,
+      "size": "90ml"
+    },
+    {
+      "_id": 4,
+      "title": "Mine Noir",
+      "description": "Mine Noir 1950 Paris by Marc Joseph, launched in 2016, features Cedar and Patchouli top notes, Sandalwood and Tonka Bean middle notes, and Leather and Musk base notes.",
+      "category": "masculine",
+      "trending": false,
+      "image": "item-4.png",
+      "oldPrice": 49.99,
+      "newPrice": 39.99,
+      "size": "100ml"
+    },
+    {
+      "_id": 5,
+      "title": "Invictus Victory",
+      "description": "Paco Rabanne Invictus Victory is a powerful, long-lasting fragrance for men, blending spicy woods and biting freshness to embody the ultimate expression of victory.",
+      "category": "masculine",
+      "trending": true,
+      "image": "item-5.png",
+      "oldPrice": 19.99,
+      "newPrice": 9.99,
+      "size": "200ml"
+    },
+    {
+      "_id": 6,
+      "title": "Legend Red",
+      "description": "Legend Red by Montblanc embodies the energetic freshness of blood orange, aroma of sage and the warmth of Mahogany wood.",
+      "category": "masculine",
+      "trending": false,
+      "image": "item-6.png",
+      "oldPrice": 44.99,
+      "newPrice": 34.99,
+      "size": "100ml"
+    },
+    {
+      "_id": 7,
+      "title": "Mont Blanc Explorer Ultra Blue",
+      "description": "Mont Blanc Explorer Ultra Blue is full of adventure and freedom, revealing refined masculinity, presence, and charisma by narrating a journey around the world.",
+      "category": "masculine",
+      "trending": true,
+      "image": "item-7.png",
+      "oldPrice": 59.99,
+      "newPrice": 49.99,
+      "size": "100ml"
+    },
+    {
+      "_id": 8,
+      "title": "Noir Extreme",
+      "description": "Noir Extreme by Tom Ford blends warm spices and citrus with tantalizing kulfi and floral notes of rose, jasmine, and orange flower.",
+      "category": "masculine",
+      "trending": true,
+      "image": "item-8.png",
+      "oldPrice": 21.99,
+      "newPrice": 16.99,
+      "size": "100ml"
+    }
+  ]
+  
