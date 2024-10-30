@@ -1,18 +1,18 @@
-import { createHashRouter } from 'react-router-dom';
-import App from '../App';
-import { Home } from '../pages/Home/Home';
+import { createHashRouter } from "react-router-dom";
+import App from "../App";
+import { Home } from "../pages/Home/Home";
 
 const router = createHashRouter([
-    {
+  {
+    path: "/",
+    element: <App />,
+    children: [
+      {
         path: "/",
-        element: <App/>,
-        children: [
-            {
-                path: "/",
-                element: <Home/>
-            },
-        ]
-    }
+        element: <Home />,
+      },
+    ],
+  },
 ]);
 
-export default router
+export default router;
