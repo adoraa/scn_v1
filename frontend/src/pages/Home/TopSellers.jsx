@@ -55,7 +55,7 @@ export const TopSellers = () => {
 
       <Swiper
         slidesPerView={1}
-        spaceBetween={30}
+        spaceBetween={50}
         navigation={true}
         breakpoints={{
           640: {
@@ -68,11 +68,11 @@ export const TopSellers = () => {
           },
           1024: {
             slidesPerView: 2,
-            spaceBetween: 50,
+            spaceBetween: 100,
           },
           1180: {
             slidesPerView: 3,
-            spaceBetween: 50,
+            spaceBetween: 100,
           },
         }}
         modules={[Pagination, Navigation]}

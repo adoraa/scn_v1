@@ -1,6 +1,5 @@
 ### scn royal
 
-git commit -m "slide js responsive breakpoints - slider"
 git commit -m "news + recommended section"
 git commit -m "login page"
 git commit -m "redux init"
