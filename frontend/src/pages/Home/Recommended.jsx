@@ -16,7 +16,7 @@ const Recommended = () => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    fetch("/products.json")
+    fetch("products.json")
       .then((res) => res.json())
       .then((data) => setProducts(data))
       .catch((error) => console.error("Error fetching products:", error));
