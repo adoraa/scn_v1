@@ -2,16 +2,15 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { FiShoppingCart } from "react-icons/fi";
 import { getImgUrl } from "../../utils/getImgUrl";
-// import { useDispatch } from "react-redux";
-// import { addToCart } from "../../redux/features/cart/cartSlice";
+import { useDispatch } from "react-redux";
+import { addToCart } from "../../redux/features/cart/cartSlice";
 
 export const ItemCard = ({ product }) => {
-  // const dispatch = useDispatch();
-  // const handleAddToCart = []
+  const dispatch = useDispatch();
 
-  /*const handleAddToCart = (product) => {
+  const handleAddToCart = (product) => {
     dispatch(addToCart(product))
-  }*/
+  }
   return (
     <div className="px-20 rounded-lg transition-shadow duration-300">
       <div className="flex flex-col sm:flex-row sm:items-center sm:h-72 sm:justify-center gap-4">
@@ -42,8 +41,7 @@ export const ItemCard = ({ product }) => {
               ${product?.oldPrice}
             </span>
           </p>
-          <button className="btn-primary px-6 space-x-1 flex items-center gap-1">
-            {/* onClick={() => handleAddToCart(product)} */}
+          <button onClick={() => handleAddToCart(product)} className="btn-primary px-6 space-x-1 flex items-center gap-1">
             <FiShoppingCart className="" />
             <span className="text-nowrap">Add to Cart</span>
           </button>
