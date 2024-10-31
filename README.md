@@ -1,6 +1,5 @@
 ### scn royal
 
-git commit -m "news"
 git commit -m "login page"
 git commit -m "redux init"
 git commit -m "redux + cart"
