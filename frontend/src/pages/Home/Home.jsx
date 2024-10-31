@@ -7,8 +7,8 @@ export const Home = () => {
   return (
     <>
       <Hero/>
-      <TopSellers/>
-      <Recommended/>
+      {/* <TopSellers/> */}
+      {/* <Recommended/> */}
     </>
   )
 }
