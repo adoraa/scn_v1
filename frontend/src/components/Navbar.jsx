@@ -17,9 +17,8 @@ const navigation = [
 
 export const Navbar = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  const cartItems = []
-  // const cartItems = useSelector((state) => state.cart.cartItems);
-  // console.log(cartItems);
+  const cartItems = useSelector((state) => state.cart.cartItems);
+  console.log(cartItems);
 
   const currentUser = false;
   return (
