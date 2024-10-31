@@ -86,6 +86,17 @@
       "oldPrice": 21.99,
       "newPrice": 16.99,
       "size": "100ml"
+    },
+    {
+      "_id": 9,
+      "title": "CK be",
+      "description": "CK be by Calvin Klein is a unisex fragrance launched in 1996, featuring a blend of floral, woody, and musk notes.",
+      "category": "unisex",
+      "trending": true,
+      "productImage": "item-9.png",
+      "oldPrice": 20.89,
+      "newPrice": 18.99,
+      "size": "200ml"
     }
   ]
   
