@@ -53,7 +53,6 @@ const Recommended = () => {
           products.slice(3, 8).map((product, index) => (
             <SwiperSlide key={index}>
               <ItemCard product={product} />
-              {/* <h2></h2> */}
             </SwiperSlide>
           ))}
       </Swiper>
