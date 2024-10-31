@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { ItemCard } from "../products/ItemCard";
+// import { ItemCard } from "../products/ItemCard";
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -81,7 +81,8 @@ export const TopSellers = () => {
         {filteredProducts.length > 0 &&
           filteredProducts.map((product, index) => (
             <SwiperSlide key={index}>
-              <ItemCard product={product} />
+              {/* <ItemCard product={product} /> */}
+              <h2></h2>
             </SwiperSlide>
           ))}
       </Swiper>
