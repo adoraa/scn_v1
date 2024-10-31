@@ -1,14 +1,39 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { ItemCard } from "../products/ItemCard";
 
-const categories = [
-    "All",
-    "Unisex",
-    "Masculine",
-    "Feminine",
-  ];
+// Import Swiper React components
+import { Swiper, SwiperSlide } from "swiper/react";
+
+// import required modules
+import { Pagination, Navigation } from "swiper/modules";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+
+const categories = ["All", "Unisex", "Masculine", "Feminine"];
 
 export const TopSellers = () => {
+  const [products, setProducts] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState("All");
+
+  useEffect(() => {
+    fetch("/products.json")
+      .then((res) => res.json())
+      .then((data) => setProducts(data))
+      .catch((error) => console.error("Error fetching products:", error));
+  }, []);
+
+  const filteredProducts =
+    selectedCategory === "All"
+      ? products
+      : products.filter(
+          (product) => product.category === selectedCategory.toLowerCase()
+        );
+
+  console.log(filteredProducts);
+
   return (
     <div className="py-10">
       <h2 className="text-3xl font-semibold mb-6">Top Sellers</h2>
@@ -27,6 +52,39 @@ export const TopSellers = () => {
           ))}
         </select>
       </div>
+
+      <Swiper
+        slidesPerView={1}
+        spaceBetween={30}
+        navigation={true}
+        breakpoints={{
+          640: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+          },
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 40,
+          },
+          1024: {
+            slidesPerView: 2,
+            spaceBetween: 50,
+          },
+          1180: {
+            slidesPerView: 3,
+            spaceBetween: 50,
+          },
+        }}
+        modules={[Pagination, Navigation]}
+        className="mySwiper"
+      >
+        {filteredProducts.length > 0 &&
+          filteredProducts.map((product, index) => (
+            <SwiperSlide key={index}>
+              <ItemCard product={product} />
+            </SwiperSlide>
+          ))}
+      </Swiper>
     </div>
   );
 };

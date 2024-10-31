@@ -1,23 +1,24 @@
-import React from 'react'
+import React from "react";
 import { Link } from "react-router-dom";
-import { FiShoppingCart } from 'react-icons/fi'
+import { FiShoppingCart } from "react-icons/fi";
 import { getImgUrl } from "../../utils/getImgUrl";
 // import { useDispatch } from "react-redux";
+// import { addToCart } from "../../redux/features/cart/cartSlice";
 
 export const ItemCard = ({ product }) => {
+  // const dispatch = useDispatch();
+  // const handleAddToCart = []
 
-    // const dispatch = useDispatch();
-    const handleAddToCart = (product)
-//     const handleAddToCart = (product) => {
-//         dispatch(addToCart(product))
-//   }
+  /*const handleAddToCart = (product) => {
+    dispatch(addToCart(product))
+  }*/
   return (
     <div className=" rounded-lg transition-shadow duration-300">
       <div className="flex flex-col sm:flex-row sm:items-center sm:h-72 sm:justify-center gap-4">
         <div className="sm:h-72 sm:flex-shrink-0 border rounded-md">
           <Link to={`/products/${product?._id}`}>
             <img
-              src={`${getImgUrl(product.image)}`}
+              src={`${getImgUrl(product.productImage)}`}
               alt=""
               className="w-full bg-cover p-2 rounded-md cursor-pointer hover:scale-105 transition-all duration-200"
             />
@@ -41,12 +42,13 @@ export const ItemCard = ({ product }) => {
               ${product?.oldPrice}
             </span>
           </p>
-          <button onClick={() => handleAddToCart(product)} className="btn-primary px-6 space-x-1 flex items-center gap-1">
+          <button className="btn-primary px-6 space-x-1 flex items-center gap-1">
+            {/* onClick={() => handleAddToCart(product)} */}
             <FiShoppingCart className="" />
             <span className="text-nowrap">Add to Cart</span>
           </button>
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
