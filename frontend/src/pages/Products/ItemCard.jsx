@@ -30,10 +30,13 @@ export const ItemCard = ({ product }) => {
               {product.title}
             </h3>
           </Link>
-          <p className="text-gray-600 mb-5">
+          <p className="text-gray-600">
             {product.description.length > 80
               ? `${product?.description.slice(0, 80)}...`
               : product.description}
+          </p>
+          <p className="text-gray-600 mb-5">
+            Qty: {product.size}
           </p>
           <p className="font-medium mb-5">
             ${product?.newPrice}

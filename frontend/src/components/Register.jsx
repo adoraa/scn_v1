@@ -56,14 +56,14 @@ const Register = () => {
             <p className="text-red-500 text-xs italic mb-3">{message}</p>
           )}
           <div>
-            <button className="bg-primary hover:bg-favorite text-white font-bold py-2 px-8 rounded focus:outline-none">
+            <button className="bg-primary hover:bg-accent text-white font-bold py-2 px-8 rounded focus:outline-none">
               Register
             </button>
           </div>
         </form>
         <p className="align-baseline font-medium mt-4 text-sm">
           Have an account? Please{" "}
-          <Link to="/login" className="text-primary hover:text-favorite">
+          <Link to="/login" className="text-primary hover:text-accent">
             Login
           </Link>
         </p>

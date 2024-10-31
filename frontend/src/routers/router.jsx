@@ -3,6 +3,7 @@ import App from "../App";
 import { Home } from "../pages/Home/Home";
 import Login from "../components/Login";
 import Register from "../components/Register";
+import CartPage from "../pages/Products/CartPage";
 
 const router = createHashRouter([
   {
@@ -20,6 +21,10 @@ const router = createHashRouter([
       {
         path: "/register",
         element: <Register />,
+      },
+      {
+        path: "/cart",
+        element: <CartPage />,
       },
     ],
   },

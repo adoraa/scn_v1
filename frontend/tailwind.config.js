@@ -10,7 +10,7 @@ export default {
         'primary': '#3B82F6',
         'secondary': '#F3F3F3',
         'dark': '#023047',
-        'favorite': '#FB8500',
+        'accent': '#FB8500',
       },
       fontFamily: {
         'primary': ["Montserrat", "sans-serif"],
