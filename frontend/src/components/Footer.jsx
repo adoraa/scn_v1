@@ -1,6 +1,6 @@
 import React from "react";
 import { FaFacebook } from "react-icons/fa";
-import { FaTwitter } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 import { FaInstagram } from "react-icons/fa";
 
 import footerLogo from "../assets/footerLogo.png"
@@ -66,12 +66,12 @@ export const Footer = () => {
             <FaFacebook size={24} />
           </a>
           <a
-            href="https://twitter.com"
+            href="https://x.com"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-primary"
           >
-            <FaTwitter size={24} />
+            <FaXTwitter size={24} />
           </a>
           <a
             href="https://instagram.com"
