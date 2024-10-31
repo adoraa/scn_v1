@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-// import { ItemCard } from "../products/ItemCard";
+import { ItemCard } from "../products/ItemCard";
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -52,8 +52,8 @@ const Recommended = () => {
         {products.length > 0 &&
           products.slice(3, 8).map((product, index) => (
             <SwiperSlide key={index}>
-              {/* <ItemCard product={product} /> */}
-              <h2></h2>
+              <ItemCard product={product} />
+              {/* <h2></h2> */}
             </SwiperSlide>
           ))}
       </Swiper>
