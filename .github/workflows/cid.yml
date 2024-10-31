@@ -19,6 +19,10 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: '16'
+      
+      - name: Clean up node_modules and dist directories
+        run: rm -rf node_modules dist
+        working-directory: ./frontend
 
       - name: install dependencies
         run: npm install
