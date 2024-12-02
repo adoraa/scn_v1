@@ -1,7 +1,7 @@
 [
     {
       "_id": 1,
-      "title": "Emper Luxe Rouge",
+      "name": "Emper Luxe Rouge",
       "description": "Emper Luxe Rouge is a warm and powerful fragrance crafted for a charismatic individual who is full of ambition.",
       "category": "unisex",
       "trending": true,
@@ -12,7 +12,7 @@
     },
     {
       "_id": 2,
-      "title": "Sauvage Elixir",
+      "name": "Sauvage Elixir",
       "description": "Sauvage Elixir is a highly concentrated fragrance, blending the iconic freshness of Sauvage with spicy notes, custom lavender essence, and rich woods for a powerful, captivating trail.",
       "category": "masculine",
       "trending": true,
@@ -23,7 +23,7 @@
     },
     {
       "_id": 3,
-      "title": "My Way",
+      "name": "My Way",
       "description": "Giorgio Armani My Way is a powerful and luminous floral bouquet with a woody and penetrating trail, embodying unique experiences and authentic encounters from around the world.",
       "category": "feminine",
       "trending": true,
@@ -34,7 +34,7 @@
     },
     {
       "_id": 4,
-      "title": "Mine Noir",
+      "name": "Mine Noir",
       "description": "Mine Noir 1950 Paris by Marc Joseph, launched in 2016, features Cedar and Patchouli top notes, Sandalwood and Tonka Bean middle notes, and Leather and Musk base notes.",
       "category": "masculine",
       "trending": false,
@@ -45,7 +45,7 @@
     },
     {
       "_id": 5,
-      "title": "Invictus Victory",
+      "name": "Invictus Victory",
       "description": "Paco Rabanne Invictus Victory is a powerful, long-lasting fragrance for men, blending spicy woods and biting freshness to embody the ultimate expression of victory.",
       "category": "masculine",
       "trending": true,
@@ -56,7 +56,7 @@
     },
     {
       "_id": 6,
-      "title": "Legend Red",
+      "name": "Legend Red",
       "description": "Legend Red by Montblanc embodies the energetic freshness of blood orange, aroma of sage and the warmth of Mahogany wood.",
       "category": "masculine",
       "trending": false,
@@ -67,7 +67,7 @@
     },
     {
       "_id": 7,
-      "title": "Mont Blanc Explorer Ultra Blue",
+      "name": "Mont Blanc Explorer Ultra Blue",
       "description": "Mont Blanc Explorer Ultra Blue is full of adventure and freedom, revealing refined masculinity, presence, and charisma by narrating a journey around the world.",
       "category": "masculine",
       "trending": true,
@@ -78,7 +78,7 @@
     },
     {
       "_id": 8,
-      "title": "Noir Extreme",
+      "name": "Noir Extreme",
       "description": "Noir Extreme by Tom Ford blends warm spices and citrus with tantalizing kulfi and floral notes of rose, jasmine, and orange flower.",
       "category": "masculine",
       "trending": true,
@@ -89,7 +89,7 @@
     },
     {
       "_id": 9,
-      "title": "CK be",
+      "name": "CK be",
       "description": "CK be by Calvin Klein is a unisex fragrance launched in 1996, featuring a blend of floral, woody, and musk notes.",
       "category": "unisex",
       "trending": true,

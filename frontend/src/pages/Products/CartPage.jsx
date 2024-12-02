@@ -52,12 +52,12 @@ export const CartPage = () => {
                           <div className="flex flex-wrap justify-between text-base font-medium text-gray-900">
                             <h3>
                               <Link to="/">
-                                {product?.title.length > 21
-                                  ? ( <> {product.title.substring(
+                                {product?.name.length > 21
+                                  ? ( <> {product.name.substring(
                                       0,
                                       20
-                                    )}<br/>{product.title.substring(20)}</> )
-                                  : (product.title)}
+                                    )}<br/>{product.name.substring(20)}</> )
+                                  : (product.name)}
                               </Link>
                             </h3>
                             <p className="sm:ml-4">${product?.newPrice}</p>

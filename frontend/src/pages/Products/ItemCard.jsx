@@ -18,7 +18,7 @@ export const ItemCard = ({ product }) => {
           <Link to={`/products/${product?._id}`}>
             <img
               src={`${getImgUrl(product.productImage)}`}
-              alt="{product.title}"
+              alt="{product.name}"
               className="w-full bg-cover p-2 rounded-md cursor-pointer hover:scale-105 transition-all duration-200"
             />
           </Link>
@@ -27,7 +27,7 @@ export const ItemCard = ({ product }) => {
         <div>
           <Link to={`/products/${product?._id}`}>
             <h3 className="text-xl font-semibold hover:text-blue-600 mb-3">
-              {product.title}
+              {product.name}
             </h3>
           </Link>
           <p className="text-gray-600">
