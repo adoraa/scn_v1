@@ -11,16 +11,12 @@ import { Pagination, Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
+import { useFetchAllProductsQuery } from "../../redux/features/products/productsApi";
 
 const Recommended = () => {
-  const [products, setProducts] = useState([]);
+ 
+  const {data: products = []} = useFetchAllProductsQuery()
 
-  useEffect(() => {
-    fetch("products.json")
-      .then((res) => res.json())
-      .then((data) => setProducts(data))
-      .catch((error) => console.error("Error fetching products:", error));
-  }, []);
   return (
     <div className="py-16">
       <h2 className="text-3xl font-semibold mb-6">Recommended</h2>

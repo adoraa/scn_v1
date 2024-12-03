@@ -1,16 +1,23 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import { FiShoppingCart } from "react-icons/fi";
-import { getImgUrl } from "../../utils/getImgUrl";
+import React from 'react'
+import { Link, useParams } from 'react-router-dom'
+import { useFetchProductByIdQuery } from '../../redux/features/products/productsApi';
+import { getImgUrl } from '../../utils/getImgUrl';
+import { FiShoppingCart } from 'react-icons/fi';
 import { useDispatch } from "react-redux";
-import { addToCart } from "../../redux/features/cart/cartSlice";
+import { addToCart } from '../../redux/features/cart/cartSlice';
 
-export const ItemCard = ({ product }) => {
-  const dispatch = useDispatch();
+const SingleProduct = () => {
+    const {id} = useParams();
+    const {data: product, isLoading, isError} = useFetchProductByIdQuery(id);
+    const dispatch = useDispatch();
+  
+    const handleAddToCart = (product) => {
+      dispatch(addToCart(product))
+    }
 
-  const handleAddToCart = (product) => {
-    dispatch(addToCart(product))
-  }
+    if(isLoading) return <div>Loading...</div>
+    if(isError) return <div>Error loading product</div>
+
   return (
     <div className="px-20 rounded-lg transition-shadow duration-300">
       <div className="flex flex-col sm:flex-row sm:items-center sm:h-72 sm:justify-center gap-4">
@@ -31,9 +38,7 @@ export const ItemCard = ({ product }) => {
             </h3>
           </Link>
           <p className="text-gray-600">
-            {product.description.length > 80
-              ? `${product?.description.slice(0, 80)}...`
-              : product.description}
+            {product.description}
           </p>
           <p className="text-gray-600 mb-5">
             Qty: {product.size}
@@ -51,7 +56,7 @@ export const ItemCard = ({ product }) => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default ItemCard;
+export default SingleProduct

@@ -11,19 +11,14 @@ import { Pagination, Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
+import { useFetchAllProductsQuery } from "../../redux/features/products/productsApi";
 
 const categories = ["All", "Unisex", "Masculine", "Feminine"];
 
 export const TopSellers = () => {
-  const [products, setProducts] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState("All");
 
-  useEffect(() => {
-    fetch("products.json")
-      .then((res) => res.json())
-      .then((data) => setProducts(data))
-      .catch((error) => console.error("Error fetching products:", error));
-  }, []);
+  const {data: products = []} = useFetchAllProductsQuery()  
 
   const filteredProducts =
     selectedCategory === "All"
@@ -31,8 +26,6 @@ export const TopSellers = () => {
       : products.filter(
           (product) => product.category === selectedCategory.toLowerCase()
         );
-
-  console.log(filteredProducts);
 
   return (
     <div className="py-10">

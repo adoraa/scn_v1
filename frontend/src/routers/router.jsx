@@ -5,6 +5,7 @@ import Login from "../components/Login";
 import Register from "../components/Register";
 import CartPage from "../pages/Products/CartPage";
 import CheckoutPage from "../pages/Products/CheckoutPage";
+import SingleProduct from "../pages/Home/SingleProduct";
 
 const router = createHashRouter([
   {
@@ -30,6 +31,10 @@ const router = createHashRouter([
       {
         path: "/checkout",
         element: <CheckoutPage />,
+      },
+      {
+        path: "/products/:id",
+        element: <SingleProduct/>
       },
     ],
   },
