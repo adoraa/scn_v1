@@ -15,10 +15,10 @@ export const Footer = () => {
             {/* Left Side - Logo and Nav */}
             <img src={footerLogo} alt="footer logo" className="mb-5 w-36" />
             <ul className="flex flex-col md:flex-row gap-4">
-                <li><a href="#home" className="hover:text-primary">Home</a></li>
-                <li><a href="#services" className="hover:text-primary">Services</a></li>
-                <li><a href="#about" className="hover:text-primary">About</a></li>
-                <li><a href="#contact" className="hover:text-primary">Contact</a></li>
+                <li><a href="#" className="hover:text-primary">Home</a></li>
+                <li><a href="#" className="hover:text-primary">Services</a></li>
+                <li><a href="#" className="hover:text-primary">About</a></li>
+                <li><a href="#" className="hover:text-primary">Contact</a></li>
             </ul>
         </div>
 
