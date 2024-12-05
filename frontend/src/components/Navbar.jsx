@@ -2,9 +2,6 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { HiMiniBars3CenterLeft } from "react-icons/hi2";
 import { IoSearchOutline } from "react-icons/io5";
-import { HiOutlineUser } from "react-icons/hi2";
-import { HiOutlineHeart } from "react-icons/hi2";
-import { HiOutlineShoppingCart } from "react-icons/hi2";
 import avatar from "../assets/avatar.png";
 import { useSelector } from "react-redux";
 
