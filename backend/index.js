@@ -10,8 +10,7 @@ require("dotenv").config();
 app.use(express.json());
 app.use(
   cors({
-    // origin: ['http://localhost:5173', 'https://book-app-frontend-tau.vercel.app'],
-    origin: ["http://localhost:5173"],
+    origin: ['http://localhost:5173', 'https://scn-v1.vercel.app/'],
     credentials: true,
   })
 );
@@ -30,7 +29,7 @@ app.use("/api/admin", adminRoutes);
 async function main() {
   await mongoose.connect(process.env.DB_URL);
   app.use("/", (req, res) => {
-    res.send("SCN Admin server!");
+    res.send("SCN Admin server is running!");
   });
 }
 
