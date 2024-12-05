@@ -7,7 +7,7 @@ const {
   updateProduct,
   deleteProduct,
 } = require("./product.controller");
-// const verifyAdminToken = require("../middleware/verifyAdminToken");
+const verifyAdminToken = require("../middleware/verifyAdminToken");
 const router = express.Router();
 
 // frontend => backend server => controller => product schema  => database => send to server => back to the frontend
@@ -17,8 +17,7 @@ const router = express.Router();
 // delete = when delete something
 
 // post a product
-// router.post("/create-product", verifyAdminToken, postProduct);
-router.post("/create-product", postProduct);
+router.post("/create-product", verifyAdminToken, postProduct);
 
 // get all products
 router.get("/", getAllProducts);
@@ -27,10 +26,8 @@ router.get("/", getAllProducts);
 router.get("/:id", getSingleProduct);
 
 // update a product endpoint
-// router.put("/edit/:id", verifyAdminToken, updateProduct);
-router.put("/edit/:id", updateProduct);
+router.put("/edit/:id", verifyAdminToken, updateProduct);
 
-// router.delete("/:id", verifyAdminToken, deleteProduct);
-router.delete("/:id", deleteProduct);
+router.delete("/:id", verifyAdminToken, deleteProduct);
 
 module.exports = router;

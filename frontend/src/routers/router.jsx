@@ -5,7 +5,17 @@ import Login from "../components/Login";
 import Register from "../components/Register";
 import CartPage from "../pages/Products/CartPage";
 import CheckoutPage from "../pages/Products/CheckoutPage";
-import SingleProduct from "../pages/Home/SingleProduct";
+import SingleProduct from "../pages/Products/SingleProduct";
+import PrivateRoute from "./PrivateRoute";
+import OrderPage from "../pages/Products/OrderPage";
+import AdminRoute from "./AdminRoute";
+import AdminLogin from "../components/AdminLogin";
+import DashboardLayout from "../pages/dashboard/DashboardLayout";
+import Dashboard from "../pages/dashboard/Dashboard";
+import ManageProducts from "../pages/dashboard/manageProducts/ManageProducts";
+import AddProduct from "../pages/dashboard/addProduct/AddProduct";
+import UpdateProduct from "../pages/dashboard/editProduct/UpdateProduct";
+import UserDashboard from "../pages/dashboard/users/UserDashboard";
 
 const router = createHashRouter([
   {
@@ -15,6 +25,14 @@ const router = createHashRouter([
       {
         path: "/",
         element: <Home />,
+      },
+      {
+        path: "/orders",
+        element: (
+          <PrivateRoute>
+            <OrderPage />
+          </PrivateRoute>
+        ),
       },
       {
         path: "/login",
@@ -30,11 +48,65 @@ const router = createHashRouter([
       },
       {
         path: "/checkout",
-        element: <CheckoutPage />,
+        element: (
+          <PrivateRoute>
+            <CheckoutPage />
+          </PrivateRoute>
+        ),
       },
       {
         path: "/products/:id",
-        element: <SingleProduct/>
+        element: <SingleProduct />,
+      },
+      {
+        path: "/user-dashboard",
+        element: <PrivateRoute><UserDashboard/></PrivateRoute>
+      }
+    ],
+  },
+  {
+    path: "/admin",
+    element: <AdminLogin />,
+  },
+  {
+    path: "/dashboard",
+    element: (
+      <AdminRoute>
+        <DashboardLayout />
+      </AdminRoute>
+    ),
+    children: [
+      {
+        path: "",
+        element: (
+          <AdminRoute>
+            <Dashboard />
+          </AdminRoute>
+        ),
+      },
+      {
+        path: "add-new-product",
+        element: (
+          <AdminRoute>
+            <AddProduct />
+          </AdminRoute>
+        ),
+      },
+      {
+        path: "edit-product/:id",
+        element: (
+          <AdminRoute>
+            <UpdateProduct />
+          </AdminRoute>
+        ),
+      },
+      {
+        path: "manage-products",
+        element: (
+          <AdminRoute>
+            <ManageProducts />
+          </AdminRoute>
+        ),
       },
     ],
   },

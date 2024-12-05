@@ -14,10 +14,11 @@ export const Login = () => {
     watch,
     formState: { errors },
   } = useForm();
+  const [loading, setLoading] = useState(false);
   const onSubmit = async (data) => {
     try {
       await loginUser(data.email, data.password);
-      alert("Login successful!");
+      // alert("Login successful!");
       navigate("/");
     } catch (error) {
       setMessage("Please provide a valid email and password");
@@ -26,13 +27,16 @@ export const Login = () => {
   };
 
   const handleGoogleSignIn = async () => {
+    setLoading(true);
     try {
       await signInWithGoogle();
-      alert("Login successful!");
+      // alert("Login successful!");
       navigate("/");
     } catch (error) {
       alert("Google sign in failed!");
-      console.error(error);
+      console.error("Google sign-in error:", error);
+    } finally {
+      setLoading(false);
     }
   };
 

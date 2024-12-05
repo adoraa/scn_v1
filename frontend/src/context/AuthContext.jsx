@@ -30,7 +30,7 @@ export const AuthProvider = ({ children }) => {
     return await signInWithEmailAndPassword(auth, email, password);
   };
 
-  // sing up with google
+  // sign up with google
   const signInWithGoogle = async () => {
     return await signInWithPopup(auth, googleProvider);
   };

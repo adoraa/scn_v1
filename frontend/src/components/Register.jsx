@@ -14,13 +14,14 @@ const Register = () => {
     watch,
     formState: { errors },
   } = useForm();
+  const [loading, setLoading] = useState(false);
 
   //register user
   const onSubmit = async (data) => {
     console.log(data);
     try {
       await registerUser(data.email, data.password);
-      alert("User registered successfully!");
+      // alert("User registered successfully!");
       navigate("/login");
     } catch (error) {
       setMessage("Please provide a valid email and password");
@@ -29,13 +30,16 @@ const Register = () => {
   };
 
   const handleGoogleSignIn = async () => {
+    setLoading(true);
     try {
       await signInWithGoogle();
-      alert("Login successful!");
+      // alert("Login successful!");
       navigate("/");
     } catch (error) {
-      alert("Google sign in failed!");
-      console.error(error);
+      alert("Google sign up failed!");
+      console.error("Google sign-up error:", error);
+    } finally {
+      setLoading(false);
     }
   };
   
