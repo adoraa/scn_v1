@@ -109,6 +109,7 @@ const AddProduct = () => {
           name="oldPrice"
           type="number"
           placeholder="Old Price"
+          step="0.01"
           register={register}
         />
 
@@ -118,6 +119,7 @@ const AddProduct = () => {
           name="newPrice"
           type="number"
           placeholder="New Price"
+          step="0.01"
           register={register}
         />
 
