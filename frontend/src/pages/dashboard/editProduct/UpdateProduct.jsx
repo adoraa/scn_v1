@@ -56,12 +56,9 @@ const UpdateProduct = () => {
       });
       Swal.fire({
         title: "Product Updated",
-        text: "Your Product is updated successfully!",
+        text: "Product updated successfully!",
         icon: "success",
-        showCancelButton: true,
         confirmButtonColor: "#3085d6",
-        cancelButtonColor: "#d33",
-        confirmButtonText: "Yes, It's Okay!",
       });
       await refetch();
     } catch (error) {
