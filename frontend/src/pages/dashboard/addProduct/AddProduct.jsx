@@ -18,7 +18,7 @@ const AddProduct = () => {
   const onSubmit = async (data) => {
     const newProductData = {
       ...data,
-      coverImage: imageFileName,
+      productImage: imageFileName,
     };
     try {
       await addProduct(newProductData).unwrap();

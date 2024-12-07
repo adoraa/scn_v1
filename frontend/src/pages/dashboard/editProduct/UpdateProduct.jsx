@@ -32,7 +32,7 @@ const UpdateProduct = () => {
       setValue("size", ProductData.size);
       setValue("oldPrice", ProductData.oldPrice);
       setValue("newPrice", ProductData.newPrice);
-      setValue("coverImage", ProductData.coverImage);
+      setValue("productImage", ProductData.productImage);
     }
   }, [ProductData, setValue]);
 
@@ -43,9 +43,9 @@ const UpdateProduct = () => {
       category: data.category,
       trending: data.trending,
       size: data.size,
-      oldPrice: Number(data.oldPrice),
-      newPrice: Number(data.newPrice),
-      coverImage: data.coverImage || ProductData.coverImage,
+      oldPrice: parseFloat(data.oldPrice),
+      newPrice: parseFloat(data.newPrice),
+      productImage: data.productImage || ProductData.productImage,
     };
     try {
       await axios.put(`${getBaseUrl()}/api/Products/edit/${id}`, updateProductData, {
@@ -141,7 +141,7 @@ const UpdateProduct = () => {
 
         <InputField
           label="Image URL"
-          name="coverImage"
+          name="productImage"
           type="text"
           placeholder="Image URL"
           register={register}
