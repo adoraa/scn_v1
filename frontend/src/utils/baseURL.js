@@ -1,5 +1,5 @@
 const getBaseUrl = () => {
-    return "http://localhost:5000"
+    return "https://scn-v1-server.vercel.app"
 }
 
 export default getBaseUrl;

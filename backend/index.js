@@ -10,7 +10,7 @@ require("dotenv").config();
 app.use(express.json());
 app.use(
   cors({
-    origin: ['http://localhost:5173', 'https://scn-v1.vercel.app/'],
+    origin: ["http://localhost:5173", "https://scn-v1.vercel.app/"],
     credentials: true,
   })
 );
@@ -26,17 +26,40 @@ app.use("/api/orders", orderRoutes);
 app.use("/api/auth", userRoutes);
 app.use("/api/admin", adminRoutes);
 
+//home roye for testing
+app.get("/", (req, res) => {
+  res.send("SCN Admin server is running!");
+});
+
+//MongoDB connection
 async function main() {
-  await mongoose.connect(process.env.DB_URL);
-  app.use("/", (req, res) => {
-    res.send("SCN Admin server is running!");
-  });
+  try {
+    await mongoose.connect(process.env.DB_URL, {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+    });
+    console.log("MongoDb connected successfully!");
+  } catch (error) {
+    console.error("Error connecting to MongoDB", error);
+  }
 }
 
-main()
-  .then(() => console.log("MongoDb connected successfully!"))
-  .catch((err) => console.log(err));
+// async function main() {
+//   await mongoose.connect(process.env.DB_URL);
+//   app.use("/", (req, res) => {
+//     res.send("SCN Admin server is running!");
+//   });
+// }
 
-app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`);
-});
+// main()
+//   .then(() => console.log("MongoDb connected successfully!"))
+//   .catch((err) => console.log(err));
+
+// app.listen(port, () => {
+//   console.log(`Example app listening on port ${port}`);
+// });
+
+main();
+
+// Export the app (required by Vercel)
+module.exports = app;
