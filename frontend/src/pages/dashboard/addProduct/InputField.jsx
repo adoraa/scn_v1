@@ -11,6 +11,7 @@ const InputField = ({ label, name, type = "text", register, placeholder }) => {
         {...register(name, { required: true })}
         className=" p-2 border w-full rounded-md focus:outline-none focus:ring focus:border-blue-300"
         placeholder={placeholder}
+        step={type === "number" ? "0.01" : undefined}
       />
     </div>
   );
