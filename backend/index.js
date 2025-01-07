@@ -26,7 +26,7 @@ app.use("/api/orders", orderRoutes);
 app.use("/api/auth", userRoutes);
 app.use("/api/admin", adminRoutes);
 
-//home roye for testing
+//home route for testing
 app.get("/", (req, res) => {
   res.send("SCN Admin server is running!");
 });
